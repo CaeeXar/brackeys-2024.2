@@ -1,0 +1,230 @@
+[gd_scene load_steps=9 format=3 uid="uid://c14fgyopc0ar0"]
+
+[ext_resource type="Texture2D" uid="uid://bnt6hxileuerr" path="res://sprites/earthquake1.png" id="1_83mt1"]
+[ext_resource type="Texture2D" uid="uid://c80cunprf4xe0" path="res://sprites/damage.png" id="1_erqui"]
+[ext_resource type="Texture2D" uid="uid://bc62xb8i5ii8g" path="res://sprites/fire1.png" id="1_f3nkg"]
+[ext_resource type="Texture2D" uid="uid://dsdu4c0ne6ppv" path="res://sprites/tornado1.png" id="2_t5vif"]
+[ext_resource type="Texture2D" uid="uid://bqeyli4jk31un" path="res://sprites/time.png" id="2_yv4r6"]
+[ext_resource type="Texture2D" uid="uid://ckesute8q76hk" path="res://sprites/area.png" id="3_pjs8c"]
+[ext_resource type="Texture2D" uid="uid://f80g7ffs3nfr" path="res://sprites/tsunami1.png" id="4_uujwf"]
+[ext_resource type="Texture2D" uid="uid://c6ljufm5ieoer" path="res://sprites/earthquake2.png" id="4_xx035"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="VBoxContainerUpgrades" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainerDamage" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerDamage"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="btnDamage" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerDamage/Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 96.0
+texture_normal = ExtResource("1_erqui")
+stretch_mode = 0
+
+[node name="LabelDamage" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerDamage"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Damage"
+
+[node name="HBoxContainerTime" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerTime"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="btnTime" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerTime/Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 96.0
+texture_normal = ExtResource("2_yv4r6")
+stretch_mode = 0
+
+[node name="LabelTime" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerTime"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Time"
+
+[node name="HBoxContainerArea" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerArea"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="btnArea" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerArea/Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 96.0
+texture_normal = ExtResource("3_pjs8c")
+stretch_mode = 0
+
+[node name="LabelArea" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerArea"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Area"
+
+[node name="HBoxContainerNext" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerNext"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="btnNext" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerNext/Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 96.0
+texture_normal = ExtResource("4_xx035")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LabelNext" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerUpgrades/HBoxContainerNext"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Earthquake"
+
+[node name="LabelUpgrade" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 32
+text = "Stats:
+Damage +1 increased"
+
+[node name="VBoxContainerDisasters" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainerAir" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerAir"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="btnAir" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerAir/Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 96.0
+texture_normal = ExtResource("2_t5vif")
+stretch_mode = 0
+
+[node name="LabelAir" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerAir"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Tornado"
+
+[node name="HBoxContainerWater" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerWater"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="btnWater" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerWater/Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 96.0
+texture_normal = ExtResource("4_uujwf")
+stretch_mode = 0
+
+[node name="LabelWater" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerWater"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Flooding"
+
+[node name="HBoxContainerFire" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerFire"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="btnFire" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerFire/Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 96.0
+texture_normal = ExtResource("1_f3nkg")
+stretch_mode = 0
+
+[node name="LabelFire" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerFire"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Firestorm"
+
+[node name="HBoxContainerEarth" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters"]
+layout_mode = 2
+
+[node name="ControlEarth" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerEarth"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="btnEarth" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerEarth/ControlEarth"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 96.0
+texture_normal = ExtResource("1_83mt1")
+stretch_mode = 0
+
+[node name="LabelEarth" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerDisasters/HBoxContainerEarth"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Landslide"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 96
+text = "PLAY"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 32
+text = "Tornado makes go fast brrr and does damage"

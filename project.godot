@@ -11,9 +11,18 @@ config_version=5
 [application]
 
 config/name="Brackeys 2024.2"
+run/main_scene="res://scenes/Disaster.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=2
 
 [dotnet]
 
 project/assembly_name="Brackeys 2024.2"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
